@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live demo — RedCap Clip Maker</title>
+<meta name="description" content="Real output from the RedCap clipping engine: a real video in, ranked vertical clips out, every score shown.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="cap">Red</span>Cap</a>
+    <nav>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#waitlist">Waitlist</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" style="padding:52px 0 40px">
+  <div class="wrap">
+    <span class="kicker">Live demo · Real engine output</span>
+    <h1 style="font-size:clamp(36px,5.5vw,64px)">This is what comes <span class="red">out.</span></h1>
+    <p class="lede">The clips below were produced by the actual RedCap engine from one real
+    video — one real 34-minute creator video — MrBeast’s “$250,000 Hunger Games In Real Life”, used here purely as a technology demo; the video belongs to its creator. Signal-only mode (no AI key), nothing hand-edited.
+    This is the experience waitlist members get first, on their own VOD.</p>
+    <form class="linkmock" onsubmit="document.getElementById('wl').scrollIntoView({behavior:'smooth'});return false;">
+      <input type="url" placeholder="Paste your link — join the waitlist to run it" aria-label="Video link">
+      <button type="submit">Make clips</button>
+    </form>
+    <p class="fineprint">Self-serve processing opens with the launch cohort. For now we run your first VOD for you.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="no">★</span><h2>Ranked clips from the run</h2></div>
+    <div class="demo-grid">
+      <div class="clip">
+        <video controls preload="none" poster="demo/clip_01.jpg" src="demo/clip_01.mp4"></video>
+        <div class="meta">
+          <span class="badge">Rank #1 · 79.2/100</span>
+          <h3>Source moment at 16:56</h3>
+          <p>Strong dialogue, a loud peak and fast action in the same 30 seconds —
+          all 4 available signals fired together.</p>
+          <div class="mini-bars">
+            <div class="bar-row"><span class="lbl">Speech</span><div class="bar"><i style="width:68%"></i></div><span class="pts">22.5</span></div>
+            <div class="bar-row"><span class="lbl">Audio</span><div class="bar"><i style="width:81%"></i></div><span class="pts">22.4</span></div>
+            <div class="bar-row"><span class="lbl">Motion</span><div class="bar"><i style="width:87%"></i></div><span class="pts">19.3</span></div>
+            <div class="bar-row"><span class="lbl">Facecam</span><div class="bar"><i style="width:90%"></i></div><span class="pts">14.9</span></div>
+          </div>
+          <p style="margin-top:12px;font-size:14px;color:var(--muted)">32 caption chunks burned in ·
+          suggested title (template — no AI key on this run): “Out, babe! we're taking over.
+          wait, who are these people?”</p>
+        </div>
+      </div>
+      <div class="clip">
+        <video controls preload="none" poster="demo/clip_02.jpg" src="demo/clip_02.mp4"></video>
+        <div class="meta">
+          <span class="badge">Rank #2 · 79.2/100</span>
+          <h3>Source moment at 29:51</h3>
+          <p>The loudest speech moment in the video — 3 of 4 signals fired
+          (facecam stayed quiet on this one, and the score shows it).</p>
+          <div class="mini-bars">
+            <div class="bar-row"><span class="lbl">Speech</span><div class="bar"><i style="width:93%"></i></div><span class="pts">30.9</span></div>
+            <div class="bar-row"><span class="lbl">Audio</span><div class="bar"><i style="width:87%"></i></div><span class="pts">24.0</span></div>
+            <div class="bar-row"><span class="lbl">Motion</span><div class="bar"><i style="width:87%"></i></div><span class="pts">19.3</span></div>
+            <div class="bar-row"><span class="lbl">Facecam</span><div class="bar"><i style="width:30%"></i></div><span class="pts">5.0</span></div>
+          </div>
+          <p style="margin-top:12px;font-size:14px;color:var(--muted)">42 caption chunks burned in ·
+          suggested title (template — no AI key on this run): “You areee! there heeeey!
+          you areee! follow me inside.”</p>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:26px;color:var(--muted);font-size:14px">Run notes, stated plainly: this run used signal-only mode — no AI key was configured, so AI hook ranking, caption correction and AI titles were off, and the titles above are the plain template fallback. Captions came from the video’s own English subtitle track with rolling-duplicate cleanup. The chat axis does not exist for recorded videos. First processing of this 34-minute video took about 20 minutes on a shared CPU; repeat runs reuse cached signal data and finish in a few minutes.</p>
+  </div>
+</section>
+
+<div class="waitlist" id="wl">
+  <div class="wrap" style="padding-top:56px;padding-bottom:56px">
+    <h2>Apni VOD par try karna hai?</h2>
+    <p>Waitlist members get their first VOD clipped free during launch onboarding —
+    real clips from your own stream, scored in the open like these.</p>
+    <!-- WAITLIST FORM ENDPOINT: PLACEHOLDER — replace
+         https://formspree.io/f/YOUR_FORM_ID with the real free form endpoint
+         before launch (same URL as index.html). See README.md → Deploy. -->
+    <form name="waitlist" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+      <input type="email" name="email" required placeholder="Your email" aria-label="Email">
+      <button type="submit">Join the waitlist</button>
+    </form>
+    <p class="fineprint">One email when your slot opens. No spam.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap cols">
+    <div><b>RedCap Clip Maker</b> — demo exports are the engine's real output, unretouched.</div>
+    <div>Source video belongs to its creator; shown here as a technology demo.
+    No background music is added to any clip — the creator's own audio only.</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedCap Clip Maker — Paste a link. Get ranked, captioned Shorts.</title>
+<meta name="description" content="Clip maker built for Indian creators. Paste a stream or VOD link, get ranked vertical clips with Hinglish captions and a post-ready pack.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&family=Archivo+Black&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><span class="cap">Red</span>Cap</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#score">The score</a>
+      <a href="#pricing">Pricing</a>
+      <a href="demo.html">Live demo</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Clip Maker · Made for Indian creators</span>
+    <h1>Paste a link.<br>Get clips that <span class="red">slap.</span></h1>
+    <p class="lede">Drop your stream or VOD link. RedCap finds the moments worth
+    clipping, scores them in the open, cuts them vertical with Hinglish captions —
+    and hands you a post-ready pack. <em>Bhai, editing ka jhanjhat khatam.</em></p>
+    <form class="linkmock" action="demo.html" method="get">
+      <input type="url" name="v" placeholder="Paste a YouTube / Twitch link…" aria-label="Video link">
+      <button type="submit">Make clips</button>
+    </form>
+    <p class="fineprint">Waitlist members get their first VOD clipped free during launch onboarding.</p>
+    <div class="hero-stats">
+      <div><b>5</b><span>signals scored per moment</span></div>
+      <div><b>9:16</b><span>full-frame vertical, always</span></div>
+      <div><b>0</b><span>black-box scores</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">01</span><h2>How it works</h2></div>
+    <div class="step">
+      <div class="n">1</div>
+      <h3>Paste the link</h3>
+      <p>A YouTube or Twitch VOD, a stream recording, or your own video file. We pull the
+      video and its caption track. No captions? A built-in transcription pass drafts them.</p>
+    </div>
+    <div class="step">
+      <div class="n">2</div>
+      <h3>Five signals hunt</h3>
+      <p>Speech, audio peaks, motion, facecam reaction and chat velocity are scored
+      separately. A moment only qualifies when at least <b>3 of the 5 signals fire
+      together</b> — single-signal guesses are how bad clips happen.</p>
+    </div>
+    <div class="step">
+      <div class="n">3</div>
+      <h3>The AI pass</h3>
+      <p>Connect your own free AI key (Groq, Gemini or OpenRouter) and an AI pass boosts
+      hook ranking, fixes Hinglish caption mistakes and writes titles. One provider's
+      free limit over? It hops to the next automatically. No key? The engine still
+      runs — signal-only, nothing breaks.</p>
+    </div>
+    <div class="step">
+      <div class="n">4</div>
+      <h3>Post-ready pack</h3>
+      <p>Every clip ships as a vertical MP4 — captions up high where thumbs can read them,
+      face kept in frame, the creator's own voice front and centre (no background music
+      drowning it) — plus a ready description with source credit and hashtags. Post it as-is.</p>
+    </div>
+  </div>
+</section>
+
+<section id="score" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">02</span><h2>Every score shows its work</h2></div>
+    <div class="scorebox">
+      <h3>Real run, clip #1 — the moment at 16:56 of the source</h3>
+      <p class="sub">A real clip from a real run of this engine — one 34-minute creator video, processed locally on CPU in signal-only mode. No stock numbers, no rented testimonials.</p>
+      <div class="bar-row"><span class="lbl">Speech · weight 30</span><div class="bar"><i style="width:68%"></i></div><span class="pts">22.5</span></div>
+      <div class="bar-row"><span class="lbl">Audio · weight 25</span><div class="bar"><i style="width:81%"></i></div><span class="pts">22.4</span></div>
+      <div class="bar-row"><span class="lbl">Motion · weight 20</span><div class="bar"><i style="width:87%"></i></div><span class="pts">19.3</span></div>
+      <div class="bar-row"><span class="lbl">Facecam · weight 15</span><div class="bar"><i style="width:90%"></i></div><span class="pts">14.9</span></div>
+      <div class="score-total"><span>Total signal score</span><span class="big">79.2<small style="font-size:20px">/100</small></span></div>
+      <p class="score-note">Chat axis: no data — the source is a recorded video, not a livestream, so the score renormalises over the 4 axes that exist and says so, here and in the run’s scores file. All 4 available axes fired on this moment.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">03</span><h2>Built for how India actually streams</h2></div>
+    <div class="feat">
+      <div>
+        <h3>Hinglish captions, done properly</h3>
+        <p>Auto-captions mangle Hinglish — research puts plain transcription error near
+        47% on code-mixed speech. Our correction pass fixes misheard words and writes
+        Roman Hinglish the way your audience reads it. “Bhai” stays “bhai”, never “brother”.</p>
+      </div>
+      <div>
+        <h3>Captions where eyes are</h3>
+        <p>2–3 words at a time, bold, boxed, placed up high — clear of the platform UI
+        at the bottom. Most viewers watch on mute; captions are not a feature here,
+        they are the product.</p>
+      </div>
+      <div>
+        <h3>Faces stay in frame</h3>
+        <p>Podcast mode tracks faces shot by shot and stacks both speakers when a
+        two-shot moment hits. Gaming mode keeps the action centred with a punch zoom
+        on the peak second. Full-frame vertical — never a blurry padded band.</p>
+      </div>
+      <div>
+        <h3>Bring-your-own-AI, zero markup</h3>
+        <p>The AI layer runs on your own free-tier keys with an automatic fallback
+        chain — Groq runs out, Gemini takes over, OpenRouter after that. We never
+        sell you AI tokens, and the engine works even with no key at all.</p>
+      </div>
+      <div>
+        <h3>Credit is automatic</h3>
+        <p>Every export pack carries the source credit in its description file —
+        the original creator is named in every pack, every time. No background
+        music is added; the moment sounds like the moment.</p>
+      </div>
+      <div>
+        <h3>Made to be posted</h3>
+        <p>9:16 MP4s sized for Shorts, Reels and TikTok, paced at a snappy 1.08×,
+        with a suggested title, hook line and hashtags written for each clip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">04</span><h2>Launch pricing</h2></div>
+    <div class="price-row">
+      <span class="plan">Free</span>
+      <span class="amt">₹0</span>
+      <p>3 VODs a month · 720p exports · watermark · standard processing. Built to spread during GTA VI launch season.</p>
+      <a class="btn dark" href="#waitlist">Join waitlist</a>
+    </div>
+    <div class="price-row hot">
+      <span class="plan">Creator<span class="tag">Most creators</span></span>
+      <span class="amt">₹399<small>/month</small></span>
+      <p>No watermark · Hinglish caption correction · priority processing · more VOD minutes for weekly streamers.</p>
+      <a class="btn" href="#waitlist">Join waitlist</a>
+    </div>
+    <div class="price-row">
+      <span class="plan">Pro / Agency</span>
+      <span class="amt">₹999<small>/month</small></span>
+      <p>Multiple channels · higher minutes · campaign tools when the Distribution Network opens.</p>
+      <a class="btn dark" href="#waitlist">Join waitlist</a>
+    </div>
+    <p style="margin-top:18px;color:var(--muted);font-size:14px">Launch pricing for waitlist members. No payment today — the waitlist is free.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">05</span><h2>Straight answers</h2></div>
+    <div class="faq">
+      <div>
+        <h3>Is the web app live right now?</h3>
+        <p>The clipping engine is built and running — the demo page shows its real output
+        from a real video. We are onboarding the first cohort from the waitlist and
+        clipping their first VODs directly while the self-serve web app is finished.
+        Join the waitlist and your first VOD is on us.</p>
+      </div>
+      <div>
+        <h3>Whose videos can I clip?</h3>
+        <p>Your own streams and VODs, or content you have clear permission to use.
+        RedCap is rights-first: campaigns and clips run on content the creator owns
+        or has licensed. We do not clip other creators' work for resale.</p>
+      </div>
+      <div>
+        <h3>What about copyright?</h3>
+        <p>Every clip pack includes the source credit in its description.
+        Gameplay clipping is common practice, but the
+        rights to any video you submit stay yours to hold — if you don't have the
+        rights, don't clip it.</p>
+      </div>
+      <div>
+        <h3>How does the moment score work?</h3>
+        <p>Five signals — speech (30), audio (25), motion (20), facecam (15), chat (10) —
+        scored per moment and shown as a breakdown, exactly like the real run above.
+        A moment must fire on at least 3 signals to qualify. If a signal has no data
+        (a VOD has no live chat, say), the score says so instead of faking it.</p>
+      </div>
+      <div>
+        <h3>What does the AI cost me?</h3>
+        <p>Nothing extra. The AI pass uses your own free-tier key from Groq, Google
+        Gemini or OpenRouter, chained so one limit ending never stops a run. Prefer
+        no AI at all? The engine's signal-only mode still finds and cuts your clips.</p>
+      </div>
+      <div>
+        <h3>Which platforms can I post to?</h3>
+        <p>Exports are 9:16 MP4s made for YouTube Shorts, Instagram Reels and TikTok,
+        with per-clip titles and hashtags in the pack.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="waitlist" id="waitlist">
+  <div class="wrap" style="padding-top:56px;padding-bottom:56px">
+    <h2>Pehla clip free.<br>Waitlist me aa jao.</h2>
+    <p>Launch cohort is small on purpose — we clip your first VOD ourselves and send
+    you the pack, so you see real output before paying anything.</p>
+    <!-- WAITLIST FORM ENDPOINT: the action URL below is a PLACEHOLDER.
+         Before launch, replace https://formspree.io/f/YOUR_FORM_ID with the
+         real free form endpoint (Formspree free tier or a Google Form URL).
+         See README.md → Deploy. Nothing else on the page needs to change. -->
+    <form name="waitlist" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+      <input type="email" name="email" required placeholder="Your email" aria-label="Email">
+      <button type="submit">Join the waitlist</button>
+    </form>
+    <p class="fineprint">One email when your slot opens. No spam, no rented lists.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap cols">
+    <div><b>RedCap Clip Maker</b> — a working title for a tool being built in the open, from Srinagar Garhwal, India.</div>
+    <div>Engine: FFmpeg · yt-dlp · faster-Whisper · OpenCV — open source, zero paid APIs.</div>
+  </div>
+</footer>
+
+</body>
+</html>
